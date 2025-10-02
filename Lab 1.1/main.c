@@ -14,4 +14,4 @@ int main () {
   result += num ;
 
   printf( "%d" , result ) ;
-}//end function
+}//end main function
