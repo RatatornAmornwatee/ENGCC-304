@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
   char ID[10] ;
   int WorkingHrs ;
   float SalaryHrs ;
   float Salary ;
+  char SalaryChar[] = {} ;
 
   printf( "Input the Employees ID(Max. 10 chars):\n" ) ;
   scanf( "%s" , ID ) ;
@@ -16,8 +18,6 @@ int main() {
   scanf( "%f" , &SalaryHrs ) ;
 
   Salary = WorkingHrs * SalaryHrs ;
-
-  printf( "Expected Output:\nEmployees ID = %s\nSalary = U$%.2f" , ID , Salary ) ;
-
-  return 0 ;
+  sprintf( SalaryChar , "%.2f" , Salary ) ;
+  //NOT FINISH YET
 }//end main function

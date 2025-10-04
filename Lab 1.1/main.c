@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main () {
+int main() {
   int num ;
   int result = 0;
 
@@ -14,4 +14,6 @@ int main () {
   result += num ;
 
   printf( "%d" , result ) ;
+
+  return 0 ;
 }//end main function

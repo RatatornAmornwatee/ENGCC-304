@@ -14,4 +14,6 @@ int main() {
   Area = ( H * W ) / 2 ;
 
   printf( "Area = %.1f" , Area ) ;
-}//end main functionls
+
+  return 0 ;
+}//end main function

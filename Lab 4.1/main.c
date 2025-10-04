@@ -10,4 +10,6 @@ int main() {
   Seconds = Days * 24 * 60 * 60 ;
 
   printf( "%d days = %d seconds" , Days , Seconds ) ;
+
+  return 0 ;
 }//end main function
