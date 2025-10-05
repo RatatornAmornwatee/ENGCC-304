@@ -11,12 +11,12 @@ int main() {
   for( int i = 0 ; i < N ; i++ ) {
     printf( "Enter value[%d]:\n" , i ) ;
     scanf( "%d" , &Arr[i] ) ;
-  }
+  }//end for
 
   printf( "Index: " ) ;
   for( int i = 1 ; i <= N ; i++ ) {
     printf( "%2d " , i ) ;
-  }
+  }//end for
 
   printf( "\nArray: " ) ;
   for( int i = 0 ; i < N ; i++ ) {
