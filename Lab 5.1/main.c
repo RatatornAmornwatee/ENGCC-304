@@ -6,7 +6,7 @@ int main() {
   int WorkingHrs ;
   float SalaryHrs ;
   float Salary ;
-  char SalaryChar[] = {} ;
+  char SalaryComma[] = {} ;
 
   printf( "Input the Employees ID(Max. 10 chars):\n" ) ;
   scanf( "%s" , ID ) ;
@@ -18,6 +18,10 @@ int main() {
   scanf( "%f" , &SalaryHrs ) ;
 
   Salary = WorkingHrs * SalaryHrs ;
-  sprintf( SalaryChar , "%.2f" , Salary ) ;
+  sprintf( SalaryComma , "%.2f" , Salary ) ;
+
+  for( int i = 0 ; i < strlen( SalaryComma ) ; i++ ) {
+    printf( "%c" , SalaryComma[ i ] ) ;
+  }
   //NOT FINISH YET
 }//end main function
