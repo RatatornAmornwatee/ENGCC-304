@@ -32,14 +32,9 @@ int main() {
 
   printf( "Enter the details of 3 students :\n" ) ;
   for( int i = 0 ; i < 3 ; i++ ) {
-    char FName[20] ;
-    char LName[20] ;
-
     printf( "Student %d:\n" , i + 1 ) ;
     printf( "Name:\n" ) ;
-    scanf( "%s" , FName ) ;
-    scanf( "%s" , LName) ;
-    sprintf( Students[ i ].Name , "%s %s" , FName , LName ) ;
+    scanf( "%[^\n]s" , Students[ i ].Name ) ;
     
     printf( "ID:\n" ) ;
     scanf( "%s" , Students[ i ].ID ) ;
