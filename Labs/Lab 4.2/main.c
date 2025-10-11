@@ -17,6 +17,11 @@ int main() {
 
   Salary = WorkingHrs * SalaryHrs ;
 
+  if( Salary < 0 ) {
+    printf( "Input Error" ) ;
+    return 0 ;
+  }
+
   printf( "Expected Output:\nEmployees ID = %s\nSalary = U$%.2f" , ID , Salary ) ;
 
   return 0 ;
