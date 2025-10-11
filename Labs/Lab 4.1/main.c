@@ -7,6 +7,11 @@ int main() {
   printf( "Input Days : " ) ;
   scanf( "%d" , &Days ) ;
 
+  if( Days < 0 ) {
+    printf( "Input Error" ) ;
+    return ;
+  }//end if
+
   Seconds = Days * 24 * 60 * 60 ;
 
   printf( "%d days = %d seconds" , Days , Seconds ) ;
