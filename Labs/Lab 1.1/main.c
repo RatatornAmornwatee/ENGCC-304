@@ -13,7 +13,7 @@ int main() {
   scanf( "%d" , &num ) ;
   result += num ;
 
-  printf( "Answer =%d" , result ) ;
+  printf( "Answer = %d" , result ) ;
 
   return 0 ;
 }//end main function
