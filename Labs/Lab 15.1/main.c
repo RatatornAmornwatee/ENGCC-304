@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 int WordCounter( FILE* ) ;
 
@@ -20,7 +19,6 @@ int main() {
   int NumberOfWord = WordCounter( file ) ;
 
   fclose( file ) ;
-  printf( "%d" , FileName[0] ) ;
 
   printf( "Total number of words in '%s' : %d words" , FileName , NumberOfWord ) ;
 
@@ -32,7 +30,9 @@ int WordCounter( FILE *file ) {
   char temp ;
 
   while( (temp = fgetc( file )) != EOF ) {
-    if( temp == ' ' ) NumberOfWord++ ;
+    if( temp == ' ' ) { 
+      NumberOfWord++ ;
+    }//end if
   }//end wile
 
   return ++NumberOfWord ;
