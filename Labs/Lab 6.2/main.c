@@ -9,13 +9,13 @@ int main() {
   if( Number % 2 == 0 ) {
     for( int i = Number ; i >= 0 ; i -= 2 ) {
       printf( "%d " , i ) ;
-    }
+    }//end for
   }
   else {
     for( int i = 1 ; i <= Number ; i += 2 ) {
       printf( "%d " , i ) ;
-    }
-  }
+    }//end for
+  }//end if
 
   return 0 ;
 }//end main function
