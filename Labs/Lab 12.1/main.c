@@ -20,7 +20,6 @@ void Grade( int Score ) {
   else if ( Score >= 55 && Score < 60 ) printf( "D+ " ) ;
   else if ( Score >= 50 && Score < 55 ) printf( "D " ) ;
   else if ( Score >= 0 && Score < 50 ) printf( "F " ) ;
-  else printf( "please enter number only." ) ;
 }//end Grade function
 
 float Average( int S1 , int S2 , int S3 , int S4 , int S5 ) {
@@ -34,7 +33,7 @@ int main() {
   for( int i = 0 ; i < 3 ; i++ ) {
     printf( "Student %d:\n" , i + 1 ) ;
     printf( "Name:\n" ) ;
-    scanf( "%[^\n]s" , Students[ i ].Name ) ;
+    scanf( " %[^\n]s" , Students[ i ].Name ) ;
     
     printf( "ID:\n" ) ;
     scanf( "%s" , Students[ i ].ID ) ;

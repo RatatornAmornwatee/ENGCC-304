@@ -21,6 +21,7 @@ int main() {
   if( Position == 1 ) Salary = 20000 ;
   else if( Position == 2 ) Salary = 35000 ;
   else if( Position == 3 ) Salary = 50000 ;
+  else printf( "please try agin" ) ;
 
   if( Experience > 5 ) ExperienceBonus = Salary * 0.2 ;
   else if( Experience > 4 ) ExperienceBonus = Salary * 0.15 ;

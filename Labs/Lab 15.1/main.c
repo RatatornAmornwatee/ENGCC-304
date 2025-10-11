@@ -1,48 +1,39 @@
 #include <stdio.h>
 #include <string.h>
 
-void GetStringFromFile( char[] , char[] ) ;
-int WordCounter( char[] ) ;
+int WordCounter( FILE* ) ;
 
 int main() {
-  char FileName[] = {} ;
-  char FileInfo[] = {} ;
+  char FileName[ 100 ] ;
 
   printf( "Input\n" ) ;
   printf( "Enter file name:\n" ) ;
   scanf( "%s" , FileName ) ;
 
-  printf( "Total number of words in '%s' : " ) ;
+  FILE * file = fopen( FileName , "r" ) ;
 
-  GetStringFromFile( FileInfo , FileName ) ;
-  int NumberOfWord = WordCounter( FileInfo ) ;
-  
-  printf( "%d words" , NumberOfWord ) ;
+  if( file == NULL ) {
+    printf( "Error openning file." ) ;
+    return 0 ;
+  }//end if
+
+  int NumberOfWord = WordCounter( file ) ;
+
+  fclose( file ) ;
+  printf( "%d" , FileName[0] ) ;
+
+  printf( "Total number of words in '%s' : %d words" , FileName , NumberOfWord ) ;
 
   return 0 ;
 }//end main function
 
-void GetStringFromFile( char FileInfo[] , char FileName[] ) {
-  FILE * file ;
-  file = fopen( FileName , "r" ) ;
-
-  fseek( file , 0 , SEEK_END ) ;
-  long Size = ftell( file ) ;
-
-  fseek( file , 0 , SEEK_SET ) ;
-  fgets( FileName , Size , file ) ;
-
-  fclose( file ) ;
-}//end getStrFromFile function
-
-int WordCounter( char FileInfo[] ) {
+int WordCounter( FILE *file ) {
   int NumberOfWord = 0 ;
+  char temp ;
 
-  for( int i = 0 ; i < strlen( FileInfo ) + 1 ; i++ ) {
-    if( FileInfo[ i ] == ' ' || FileInfo[ i ] == '\0' ) { 
-      NumberOfWord++ ;
-    }//end if
-  }//end for
+  while( (temp = fgetc( file )) != EOF ) {
+    if( temp == ' ' ) NumberOfWord++ ;
+  }//end wile
 
-  return NumberOfWord ;
+  return ++NumberOfWord ;
 }//end WordCounter function
