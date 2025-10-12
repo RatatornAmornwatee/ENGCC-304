@@ -24,15 +24,18 @@ int main() {
   switch( Option ) {
     case( 1 ) : {
       addBook( Books , &Count ) ;
+      break ;
     }
     case( 2 ) : {
       char Title[ 100 ] ;
       printf( "Enter Title to Search: " ) ;
       scanf( " %[^\n]s" , Title ) ;
       searchBook( Books , Count , Title ) ;
+      break ;
     }
     case( 3 ) : {
       displayBooks( Books , Count ) ;
+      break ;
     }
   }//end switch case
 
@@ -51,9 +54,9 @@ void addBook( Book books[] , int *count ) {
   printf( "Enter Year: " ) ;
   scanf( "%d" , &books[ *count ].Year ) ;
   
-  printf( "Book added successfully!" ) ;
+  printf( "Book added successfully!\n" ) ;
 
-  *count++ ;
+  *count += 1 ;
 }//end addBook function
 
 void searchBook( Book books[] , int count , char title[] ) {
@@ -62,7 +65,7 @@ void searchBook( Book books[] , int count , char title[] ) {
       printBook( books[ i ] ) ;
       break ;
     }//end if
-    printf( "Book not found." ) ;
+    printf( "Book not found.\n" ) ;
   }//end for
 }//end searchBook function
 
@@ -74,7 +77,7 @@ void displayBooks( Book books[] , int count ) {
 
 void printBook( Book book ) {
   printf(
-    "Book ID: %s\nTitle: %s\nAuthor: %s\nYear: %d" ,
+    "Book ID: %s\nTitle: %s\nAuthor: %s\nYear: %d\n" ,
     book.ID ,
     book.Title ,
     book.Author ,
