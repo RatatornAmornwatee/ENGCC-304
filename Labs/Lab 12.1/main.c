@@ -22,7 +22,7 @@ void Grade( int Score ) {
   else if ( Score >= 0 && Score < 50 ) printf( "F " ) ;
 }//end Grade function
 
-float Average( int S1 , int S2 , int S3 , int S4 , int S5 ) {
+float Average( float S1 , float S2 , float S3 , float S4 , float S5 ) {
   return ( S1 + S2 + S3 + S4 + S5 ) / 5 ;
 }//end Average function
 

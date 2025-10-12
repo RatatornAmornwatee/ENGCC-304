@@ -18,14 +18,11 @@ int main() {
   int *ptr1 = &num1 ;
   int *ptr2 = &num2 ;
 
+  printf( "Before swap (num1 & num2) : %d, %d\n" , num1 , num2 );
+
   swapNumbers( ptr1 , ptr2 ) ;
 
-  printf("Before swap (num1 & num2) : %d, %d\nAfter swap (num1 & num2) : %d, %d" ,
-    num1 ,
-    num2 ,
-    *ptr1 ,
-    *ptr2
-  ) ;
+  printf( "After swap (num1 & num2) : %d, %d" , *ptr1 , *ptr2 ) ;
 
   return 0 ;
 }//end main function
