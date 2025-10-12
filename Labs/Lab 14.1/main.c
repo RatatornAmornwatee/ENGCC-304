@@ -22,6 +22,7 @@ int main() {
   MinValue = Min( Values , Size ) ;
   MaxValue = Max( Values , Size ) ;
 
+  printf( "\n" ) ;
   PrintArray( Values , Size ) ;
   printf( "\nMin:%d" , MinValue ) ;
   printf( "\nMax:%d" , MaxValue ) ;
