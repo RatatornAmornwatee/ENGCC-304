@@ -38,7 +38,6 @@ int main() {
       break ;
     }
   }//end switch case
-
 }//end main function
 
 void addBook( Book books[] , int *count ) { 
